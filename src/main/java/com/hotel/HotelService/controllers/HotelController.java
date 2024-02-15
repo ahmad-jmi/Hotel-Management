@@ -1,7 +1,6 @@
 package com.hotel.HotelService.controllers;
 
 import com.hotel.HotelService.entities.Hotel;
-import com.hotel.HotelService.repositories.HotelRepository;
 import com.hotel.HotelService.services.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +17,6 @@ public class HotelController {
 
     @PostMapping
     public ResponseEntity<Hotel> createHotel(@RequestBody Hotel hotel){
-        String s;
         return ResponseEntity.status(HttpStatus.OK).body(hotelService.create(hotel));
     }
 
