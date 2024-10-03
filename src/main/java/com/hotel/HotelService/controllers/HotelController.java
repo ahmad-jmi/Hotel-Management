@@ -17,7 +17,7 @@ public class HotelController {
 
     @PostMapping
     public ResponseEntity<Hotel> createHotel(@RequestBody Hotel hotel){
-        return ResponseEntity.status(HttpStatus.OK).body(hotelService.create(hotel));
+        return ResponseEntity.status(HttpStatus.CREATED).body(hotelService.create(hotel));
     }
 
     @GetMapping("/{hotelId}")
